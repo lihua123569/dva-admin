@@ -11,6 +11,7 @@ function RouterConfig({ history,app }) {
       <Route path="/users" component={Users} />
       <Route path="/main"   component={main} >
       	<Route path="/error404"   component={require("./routes/error404")} />
+      	<Route path="/error500"   component={require("./routes/error500")} />
       </Route>
     </Router>
   );
