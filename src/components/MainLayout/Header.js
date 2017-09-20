@@ -5,7 +5,7 @@ import { Layout, Menu, Icon } from 'antd';
 
 const { Header ,Sider, Content } = Layout;
 
-function Header1({state,location}){
+function Header2({state,location}){
     return (
     	  
 	          <Header style={{ background: '#fff', padding: 0 }}>
@@ -32,4 +32,4 @@ function Header1({state,location}){
     );
 }
 
-export default Header1;
+export default Header2;

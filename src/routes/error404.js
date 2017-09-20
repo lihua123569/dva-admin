@@ -2,10 +2,12 @@ import React from 'react';
 import { connect } from 'dva'; 
 import styles from './error404.css';
  
-function error404({ location }) {
+const  error404 = ({ location }) => {
   return (
     
-       <div className={styles.error404}>404</div>
+       <div className={styles.error404}>
+       404
+        </div>
     
   );
 }
