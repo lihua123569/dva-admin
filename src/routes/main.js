@@ -7,28 +7,30 @@ import SiderComponent from './App/layout/SiderComponent';
 
 const {	Footer,	Header,	Sider,	Content} = Layout;
 
-function Main({	location,	children}) {
+class Main extends React.Component {
 	
-	const state = {
-		collapsed: false,
-	};
-	
-	const toggle = () => {
-		this.setState({
-			collapsed: !this.state.collapsed,
-		});
-	}
-
+ state = {
+    collapsed: false,
+  };
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  }
+  render() {
+  	 const {children, location, dispatch} = this.props;
 	return(
+
+
 
 		<Layout>
 		
-			<Sider trigger={null} collapsible  collapsed={this.state.collapsed}>
+			<Sider trigger={null} collapsible  collapsed={this.state.collapsed} >
 	       		<SiderComponent />
 	       	</Sider>
 	       	
 	     	<Layout>
-	        	<HeaderComponent />
+	        	<HeaderComponent state={this.state} toggle={this.toggle}/>
 		        <Content style={{ margin: '15px 16px', padding: 24, background: '#fff', minHeight: 280,height:800 }}>
 		          {children}
 		        </Content> 
@@ -37,6 +39,7 @@ function Main({	location,	children}) {
 	        
         </Layout>
 	);
+	 }
 }
 
 export default Main;

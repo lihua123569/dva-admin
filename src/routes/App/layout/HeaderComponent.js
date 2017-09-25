@@ -21,11 +21,12 @@ const menu = (
   </Menu>
 );
 
-const HeaderComponent = ({	state,	location}) => {
+const HeaderComponent = ({	state,	toggle}) => {
 
 	return(
 			<div>
 				<Header style={{background:'#fff'}}>
+				 	<Icon className="trigger"   type={state.collapsed ? 'menu-unfold' : 'menu-fold'} onClick={toggle}/>
 	        	<div style={{float:'right'}}>
 	        		<Icon type="message" style={{ fontSize: 16, color: '#08c' , margin:'24px 12px'}} />
 	        		<Icon type="mail" style={{ fontSize: 16, color: '#08c' , margin:'24px 12px'}} />

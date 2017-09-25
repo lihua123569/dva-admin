@@ -4,7 +4,8 @@ import { Table, Pagination, Popconfirm } from 'antd';
 import styles from './Users.css';
 import { PAGE_SIZE } from '../../constants';
 
-function Users({ list: dataSource, total, page: current }) {
+function Users({ list: dataSource, total, page: current ,state}) {
+	
   function deleteHandler(id) {
     console.warn(`TODO: ${id}`);
   }

@@ -1,9 +1,14 @@
-import React, {	Component,	PropTypes} from 'react';
+import React, {
+	Component,
+	PropTypes
+} from 'react';
 
 import { Link } from 'dva/router';
 import { Avatar, Badge, Dropdown, Button, Layout, Menu, Icon } from 'antd';
-
-const {	Sider} = Layout;
+import styles from '../../../components/skin.css';
+const {
+	Sider
+} = Layout;
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -11,8 +16,7 @@ const MenuItemGroup = Menu.ItemGroup;
 const SiderComponent = () => {
 	return(
 		<div>
-			<div className="logo" />
-	    	<div style={{margin:'24px 16px',textAlign: 'center' }}>
+	    	<div className="logo" className={styles.avatarStyle} >
 	        	<Avatar style={{ backgroundColor: '#87d068' }} icon="user" />
 	         	<span style={{color:'gray',lineHeight:'32px',display:'inline-block',height: '32px', width: '75px', overflow:' hidden'}}>DVA ADMIN</span>
 	        </div>
@@ -20,7 +24,7 @@ const SiderComponent = () => {
 	        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
 	            <Menu.Item key="1">
 	              <Link to="/dashboard" >
-		                    <Icon type="bars" />管理平台
+		                    <Icon type="bars" />管理平台{location.pathname}
 		                </Link>
 	            </Menu.Item>
 	           

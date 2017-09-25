@@ -3,10 +3,9 @@ import './index.css';
 
 // 1. Initialize
 const app = dva();
-
 app.model(require("./models/users"));
+app.model(require("./models/example"));
 
-app.model(require("./models/main"));
 
 // 2. Plugins
 // app.use({});
