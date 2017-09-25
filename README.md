@@ -9,6 +9,6 @@ routes：页面为单位以文件夹保存，文件夹名首字母小写（特�
 
 
 启动
-cnpm/npm -- *
-*   install
-*   start
+cnpm/npm  
+npm   install
+npm   start
