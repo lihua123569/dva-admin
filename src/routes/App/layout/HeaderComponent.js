@@ -25,7 +25,7 @@ const HeaderComponent = ({	state,	toggle}) => {
 
 	return(
 			<div>
-				<Header style={{background:'#fff'}}>
+				<Header style={{background:'#fff',padding:'10px'}}>
 				 	<Icon className="trigger"   type={state.collapsed ? 'menu-unfold' : 'menu-fold'} onClick={toggle}/>
 	        	<div style={{float:'right'}}>
 	        		<Icon type="message" style={{ fontSize: 16, color: '#08c' , margin:'24px 12px'}} />
