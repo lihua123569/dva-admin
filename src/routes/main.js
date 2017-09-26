@@ -31,7 +31,7 @@ class Main extends React.Component {
 	       	
 	     	<Layout>
 	        	<HeaderComponent state={this.state} toggle={this.toggle}/>
-		        <Content style={{ margin: '15px 16px', padding: 24, background: '#fff', minHeight: 280,height:800 }}>
+		        <Content style={{ margin: '15px 16px',   background: '#fff', minHeight: 280,height:800 }}>
 		          {children}
 		        </Content> 
 	        	<FooterComponent />
